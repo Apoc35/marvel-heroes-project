@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarvelHeaderModule } from './shared/marvel-header/marvel-header.module';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { MarvelHeroesModule } from './features/components/marvel-heroes/marvel-heroes.module';
+
 
 
 @NgModule({
@@ -16,6 +18,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     BrowserAnimationsModule,
     MarvelHeaderModule,
     MatGridListModule,
+    MarvelHeroesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
