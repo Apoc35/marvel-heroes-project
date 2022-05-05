@@ -6,12 +6,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarvelHeaderModule } from './shared/marvel-header/marvel-header.module';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MarvelHeroesModule } from './features/components/marvel-heroes/marvel-heroes.module';
+import { MarvelContainerComponent } from './shared/marvel-container/marvel-container.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MarvelContainerComponent
   ],
   imports: [
     BrowserModule,
