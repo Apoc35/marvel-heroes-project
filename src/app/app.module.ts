@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MarvelHeaderModule } from './components/marvel-header/marvel-header.module';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MarvelHeaderModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
