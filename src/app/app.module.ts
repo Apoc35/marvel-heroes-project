@@ -7,20 +7,22 @@ import { MarvelHeaderModule } from './shared/marvel-header/marvel-header.module'
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MarvelHeroesModule } from './features/components/marvel-heroes/marvel-heroes.module';
 import { MarvelContainerComponent } from './shared/marvel-container/marvel-container.component';
+import { MarvelFooterModule } from './shared/marvel-footer/marvel-footer.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MarvelContainerComponent
+    MarvelContainerComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MarvelHeaderModule,
     MatGridListModule,
-    MarvelHeroesModule
+    MarvelHeroesModule,
+    MarvelFooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
