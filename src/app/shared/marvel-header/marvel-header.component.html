@@ -1,12 +1,16 @@
-<header class="header-container">
-  <img src={{logoImage}} />
-  <mat-form-field class="form-field" hintLabel="Nome do herói" appearance="fill">
-    <mat-label>Pesquise aqui</mat-label>
-    <input matInput #input placeholder="Ex. Iron man">
-    <mat-hint align="end">Somente heróis</mat-hint>
+<header>
+  <app-marvel-container>
+    <span  class="header-container">
+      <img src={{logoImage}} />
+      <mat-form-field class="form-field" hintLabel="Nome do herói" appearance="fill">
+        <mat-label>Pesquise aqui</mat-label>
+        <input matInput #input placeholder="Ex. Iron man">
+        <mat-hint align="end">Somente heróis</mat-hint>
 
-    <button mat-icon-button matSuffix>
-      <mat-icon aria-hidden="false" aria-label="search icon" class="icon-display">search</mat-icon>
-    </button>
-  </mat-form-field>
+        <button mat-icon-button matSuffix>
+          <mat-icon aria-hidden="false" aria-label="search icon" class="icon-display">search</mat-icon>
+        </button>
+      </mat-form-field>
+    </span>
+  </app-marvel-container>
 </header>

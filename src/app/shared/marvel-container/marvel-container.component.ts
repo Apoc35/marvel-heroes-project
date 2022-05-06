@@ -5,11 +5,4 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './marvel-container.component.html',
   styleUrls: ['./marvel-container.component.css']
 })
-export class MarvelContainerComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class MarvelContainerComponent {}

@@ -1,3 +1,5 @@
+import { MarvelContainerModule } from './../marvel-container/marvel-container.module';
+import { MarvelContainerComponent } from './../marvel-container/marvel-container.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarvelHeaderComponent } from './marvel-header.component';
 import { NgModule } from '@angular/core';
@@ -17,7 +19,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MarvelContainerModule
   ],
   exports:[MarvelHeaderComponent]
 })

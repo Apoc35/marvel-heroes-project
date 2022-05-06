@@ -1,8 +1,17 @@
+header {
+  background-image: url('../../../assets/background.jpg');
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 200px;
+  height: 280px;
+  margin-bottom: 30px;
   img {
     display: flex;
     height: auto;
@@ -13,4 +22,5 @@
 .form-field {
   max-width: 400px;
   width: 100%;
+  background-color:rgb(255,255,255);opacity:0.9;
 }

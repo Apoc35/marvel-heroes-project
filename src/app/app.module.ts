@@ -1,3 +1,4 @@
+import { MarvelContainerModule } from './shared/marvel-container/marvel-container.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +15,6 @@ import { MarvelFooterModule } from './shared/marvel-footer/marvel-footer.module'
 @NgModule({
   declarations: [
     AppComponent,
-    MarvelContainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +22,8 @@ import { MarvelFooterModule } from './shared/marvel-footer/marvel-footer.module'
     MarvelHeaderModule,
     MatGridListModule,
     MarvelHeroesModule,
-    MarvelFooterModule
+    MarvelFooterModule,
+    MarvelContainerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
