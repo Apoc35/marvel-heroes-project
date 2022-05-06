@@ -1,4 +1,14 @@
 <section>
+  <div class="grid-button-container">
+    <button mat-icon-button matSuffix> Ordernar por nome - A - Z
+      <mat-icon aria-hidden="false" aria-label="search icon" >favorite</mat-icon>
+    </button>
+
+    <button mat-icon-button matSuffix> Somente favoritos
+      <mat-icon aria-hidden="false" aria-label="search icon" >favorite</mat-icon>
+    </button>
+
+  </div>
   <mat-grid-list cols="4" rowHeight="100px">
     <mat-grid-tile
         *ngFor="let tile of tiles"
