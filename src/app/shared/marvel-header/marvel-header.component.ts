@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './marvel-header.component.html',
   styleUrls: ['./marvel-header.component.scss']
 })
-export class MarvelHeaderComponent implements OnInit {
+export class MarvelHeaderComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+public logoImage ='../../assets/logo.png';
 
 }

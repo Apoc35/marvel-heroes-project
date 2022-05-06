@@ -3,9 +3,9 @@
   justify-content: space-between;
   align-items: center;
   height: 200px;
-  .logo {
-    background-color: red;
-    height: 50px;
+  img {
+    display: flex;
+    height: auto;
     width: 250px;
   }
 }
