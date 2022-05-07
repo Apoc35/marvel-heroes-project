@@ -8,10 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-
-
-
-
+import {MarvelHeroesRoutingModule} from '../marvel-heroes/marvel-heroes-routing.module';
 @NgModule({
   declarations: [MarvelHeroesComponent],
   imports: [
@@ -21,9 +18,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    MatButtonModule
-
-
+    MatButtonModule,
+    MarvelHeroesRoutingModule
   ],
   exports: [
     MarvelHeroesComponent
