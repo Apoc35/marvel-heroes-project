@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MarvelHeroesRoutingModule} from '../marvel-heroes/marvel-heroes-routing.module';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [MarvelHeroesComponent],
   imports: [
@@ -19,7 +20,8 @@ import {MarvelHeroesRoutingModule} from '../marvel-heroes/marvel-heroes-routing.
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
-    MarvelHeroesRoutingModule
+    MarvelHeroesRoutingModule,
+    MatCheckboxModule
   ],
   exports: [
     MarvelHeroesComponent
