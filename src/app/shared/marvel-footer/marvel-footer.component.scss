@@ -10,6 +10,7 @@
 .space-class {
   display:flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -19,28 +20,3 @@
   width: 250px;
 }
 
-.fa {
-  font-size: 30px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  a {
-    padding: 8px 10px;
-    border: solid 1px #000;
-    border-radius: 4px;
-    background-color:rgb(255,255,255);
-    margin: 10px;
-    color: black;
-    &:hover {
-      opacity: 0.7;
-    }
-    &:first-of-type{
-      margin-left: 0px;
-    }
-    &:last-of-type{
-      margin-right: 0px;
-    }
-  }
-}

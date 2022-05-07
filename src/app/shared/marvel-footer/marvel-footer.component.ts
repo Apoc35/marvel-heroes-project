@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarvelFooterComponent {
 
-public footerlogo = '../../assets/logo.png';
+  public footerlogo = '../../assets/logo.png';
+  public socialList = ['codepen','facebook','twitter','googleplus','linkedin'];
 
 }
