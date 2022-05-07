@@ -9,7 +9,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { MarvelHeroesModule } from './features/components/marvel-heroes/marvel-heroes.module';
 import { MarvelContainerComponent } from './shared/marvel-container/marvel-container.component';
 import { MarvelFooterModule } from './shared/marvel-footer/marvel-footer.module';
-import { SocialIconsComponent } from './shared/social-icons/social-icons.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -24,7 +24,8 @@ import { SocialIconsComponent } from './shared/social-icons/social-icons.compone
     MatGridListModule,
     MarvelHeroesModule,
     MarvelFooterModule,
-    MarvelContainerModule
+    MarvelContainerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

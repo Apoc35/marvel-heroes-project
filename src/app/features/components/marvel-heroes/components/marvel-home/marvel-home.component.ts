@@ -1,3 +1,5 @@
+import { take } from 'rxjs';
+import { HeroesService } from './../../../../../services/heroes.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarvelHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly heroesService: HeroesService,
+  ){}
 
   ngOnInit(): void {
+    this.heroesService.getHeroes().pipe(take(1)).subscribe((response) => {
+      console.log(response);
+    })
   }
 
 }

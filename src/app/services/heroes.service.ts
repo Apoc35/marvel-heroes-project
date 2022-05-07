@@ -1,3 +1,4 @@
+import { HeroesRepository } from './../repository/heroes/heroes.repository';
 import { Observable, ReplaySubject, take } from 'rxjs';
 import { HeroesResponse } from './../models/heroes.model';
 import { Injectable } from '@angular/core';
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class HeroesRepository {
+export class HeroesService {
 
   public readonly $heroesData = new ReplaySubject<HeroesResponse>(1);
 
