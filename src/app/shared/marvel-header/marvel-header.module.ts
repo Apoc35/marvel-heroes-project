@@ -1,3 +1,4 @@
+import { MarvelFooterComponent } from './../marvel-footer/marvel-footer.component';
 import { MarvelContainerModule } from './../marvel-container/marvel-container.module';
 import { MarvelContainerComponent } from './../marvel-container/marvel-container.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+
 
 
 @NgModule({
