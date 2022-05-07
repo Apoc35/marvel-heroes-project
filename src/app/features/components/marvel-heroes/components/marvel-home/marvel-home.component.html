@@ -1,2 +1,25 @@
-<p>marvel-home works!</p>
+<div class="grid-button-container">
+  <button mat-mini-fab color="black" matSuffix>
+    <mat-icon aria-hidden="false" aria-label="home icon" >home</mat-icon>
+  </button>
 
+  <section class="example-section">
+    <mat-checkbox class="example-margin" color="primary">Ordenar de A-Z</mat-checkbox>
+  </section>
+
+  <button mat-mini-fab color="black" matSuffix>
+    <mat-icon aria-hidden="false" aria-label="favorite icon" >favorite</mat-icon>
+  </button>
+
+</div>
+
+
+<mat-grid-list *ngIf="heroes && heroes.length > 0" cols="4" rowHeight="100px">
+  <mat-grid-tile
+      *ngFor="let hero of heroes"
+      colspan="1"
+      rowspan="3"
+      [style.background]="'lightblue'">
+    {{hero.name}}
+  </mat-grid-tile>
+</mat-grid-list>

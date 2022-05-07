@@ -1,15 +1,17 @@
 export interface HeroesResponse {
-  data: {
-    results: Heroes;
-  };
+  data: Data;
 }
 
-export interface Heroes {
-  id: number;
-  name:string;
-  description:string;
-  modified:number;
-  thumbnail: thumbnail;
+interface Data {
+  results: Array<Hero>;
+}
+
+export interface Hero {
+  id?: number;
+  name?:string;
+  description?:string;
+  modified?:number;
+  thumbnail?: thumbnail;
 }
 
 interface thumbnail {

@@ -1,3 +1,4 @@
+import { Hero, HeroesResponse } from './../../../../../models/heroes.model';
 import { take } from 'rxjs';
 import { HeroesService } from './../../../../../services/heroes.service';
 import { Component, OnInit } from '@angular/core';
@@ -9,13 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarvelHomeComponent implements OnInit {
 
+  public heroes: Array<Hero> = [];
+
   constructor(
     private readonly heroesService: HeroesService,
   ){}
 
   ngOnInit(): void {
     this.heroesService.getHeroes().pipe(take(1)).subscribe((response) => {
-      console.log(response);
+      this.heroes = response.data.results;
     })
   }
 

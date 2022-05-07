@@ -15,13 +15,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    MatGridListModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatButtonModule,
     MarvelHeroesRoutingModule,
-    MatCheckboxModule
   ],
   exports: [
     MarvelHeroesComponent
