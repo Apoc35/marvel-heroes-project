@@ -16,7 +16,13 @@ export class HeroesRepository {
 
   public getHeroes():Observable<HeroesResponse>{
     return this.httpClient.get<HeroesResponse>(
-      `${urlConfig.heroes}&limit=20&orderBy=name&${urlParams}`
+      `${urlConfig.heroes}&limit=20nameStartsWith=da&orderBy=name&${urlParams}`
+    )
+  }
+
+  public searchHeroes(name: string):Observable<HeroesResponse>{
+    return this.httpClient.get<HeroesResponse>(
+      `${urlConfig.heroes}&limit=20&nameStartsWith=${name}&orderBy=name&${urlParams}`
     )
   }
 

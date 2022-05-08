@@ -1,6 +1,6 @@
 import { HeroesRepository } from './../repository/heroes/heroes.repository';
 import { Observable, ReplaySubject, take } from 'rxjs';
-import { HeroesResponse } from './../models/heroes.model';
+import { Hero, HeroesResponse } from './../models/heroes.model';
 import { Injectable } from '@angular/core';
 
 
@@ -9,7 +9,8 @@ import { Injectable } from '@angular/core';
 })
 export class HeroesService {
 
-  public readonly $heroesData = new ReplaySubject<HeroesResponse>(1);
+  //public readonly $heroesData = new ReplaySubject<HeroesResponse>(1);
+  public heroes: Array<Hero> = [];
 
   constructor(
     private readonly heroesRepository: HeroesRepository,
@@ -17,11 +18,16 @@ export class HeroesService {
   {}
 
   public addHeroes(heroesResponse:HeroesResponse) {
-    this.$heroesData.next(heroesResponse);
+    //this.$heroesData.next(heroesResponse);
+    this.heroes = heroesResponse.data.results;
   }
 
   public getHeroes():Observable<HeroesResponse>{
     return this.heroesRepository.getHeroes().pipe(take(1));
+  }
+
+  public searchHeroes(heroName: string):Observable<HeroesResponse>{
+    return this.heroesRepository.searchHeroes(heroName).pipe(take(1));
   }
 
 }

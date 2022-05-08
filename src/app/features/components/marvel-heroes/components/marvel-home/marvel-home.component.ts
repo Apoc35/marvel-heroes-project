@@ -10,10 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarvelHomeComponent implements OnInit {
 
-  public heroes: Array<Hero> = [];
+  public heroes: Array<Hero> = this.heroesService.heroes;
 
   constructor(
-    private readonly heroesService: HeroesService,
+    public readonly heroesService: HeroesService,
   ){}
 
   public takeImage(thumbnail: Thumbnail): string {
@@ -22,9 +22,8 @@ export class MarvelHomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroesService.getHeroes().pipe(take(1)).subscribe((response) => {
-      this.heroesService.addHeroes(response)
+      this.heroesService.addHeroes(response);
       this.heroes = response.data.results;
-      console.log(this.heroes)
     })
   }
 
