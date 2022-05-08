@@ -11,10 +11,10 @@ export interface Hero {
   name?:string;
   description?:string;
   modified?:number;
-  thumbnail?: thumbnail;
+  thumbnail?: Thumbnail;
 }
 
-interface thumbnail {
+export interface Thumbnail {
   path:string;
   extension:string;
 }

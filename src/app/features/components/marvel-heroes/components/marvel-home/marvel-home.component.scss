@@ -1,0 +1,21 @@
+.grid-button-container{
+  display:flex;
+  justify-content:space-around;
+  margin-bottom:20px;
+}
+
+.heroes {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 250px;
+  grid-gap: 20px;
+  a {
+    cursor: pointer;
+    img {
+      display: flex;
+      height: 200px;
+      background: cover;
+      width: 100%;
+    }
+  }
+}

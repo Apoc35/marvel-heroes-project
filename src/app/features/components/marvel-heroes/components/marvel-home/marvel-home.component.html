@@ -14,7 +14,14 @@
 </div>
 
 
-<mat-grid-list *ngIf="heroes && heroes.length > 0" cols="4" rowHeight="100px">
+<div class="heroes">
+  <a *ngFor="let hero of heroes">
+    <img *ngIf="hero.thumbnail" [src]="takeImage(hero.thumbnail)" />
+    {{ hero.name }}
+  </a>
+</div>
+
+<!-- <mat-grid-list *ngIf="heroes && heroes.length > 0" cols="4" rowHeight="100px">
   <mat-grid-tile
       *ngFor="let hero of heroes"
       colspan="1"
@@ -22,4 +29,4 @@
       [style.background]="'lightblue'">
     {{hero.name}}
   </mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
