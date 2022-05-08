@@ -9,8 +9,7 @@ import { Injectable } from '@angular/core';
 })
 export class HeroesService {
 
-  //public readonly $heroesData = new ReplaySubject<HeroesResponse>(1);
-  public heroes: Array<Hero> = [];
+  public readonly $heroesData = new ReplaySubject<HeroesResponse>(1);
 
   constructor(
     private readonly heroesRepository: HeroesRepository,
@@ -18,8 +17,7 @@ export class HeroesService {
   {}
 
   public addHeroes(heroesResponse:HeroesResponse) {
-    //this.$heroesData.next(heroesResponse);
-    this.heroes = heroesResponse.data.results;
+    this.$heroesData.next(heroesResponse);
   }
 
   public getHeroes():Observable<HeroesResponse>{

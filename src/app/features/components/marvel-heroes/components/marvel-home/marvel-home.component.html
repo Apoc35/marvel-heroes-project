@@ -15,7 +15,7 @@
 
 
 <div class="heroes">
-  <a *ngFor="let hero of this.heroesService.heroes">
+  <a *ngFor="let hero of heroes">
     <img *ngIf="hero.thumbnail" [src]="takeImage(hero.thumbnail)" />
     {{ hero.name }}
   </a>
