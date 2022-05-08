@@ -20,7 +20,7 @@ export class MarvelHeaderComponent implements OnInit {
 
   public ngOnInit(): void {
     this.form = this.formBuilder.group({
-      search: ['', Validators.required]
+      search: ['', [Validators.required, Validators.minLength(2)]]
     });
 
     this.form.get('search')?.valueChanges.pipe(debounceTime(500), distinctUntilChanged()).subscribe(() => {
@@ -30,7 +30,9 @@ export class MarvelHeaderComponent implements OnInit {
 
   public submit(): void {
     this.heroesService.searchHeroes(this.form.get('search')?.value).pipe(take(1)).subscribe((response) => {
-      this.heroesService.addHeroes(response);
+      if (this.form.valid) {
+        this.heroesService.addHeroes(response);
+      }
     })
   }
 
