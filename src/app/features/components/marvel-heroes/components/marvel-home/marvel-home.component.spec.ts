@@ -1,5 +1,6 @@
+import { MarvelHomeModule } from './marvel-home.module';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MarvelHomeComponent } from './marvel-home.component';
 
 describe('MarvelHomeComponent', () => {
@@ -8,7 +9,7 @@ describe('MarvelHomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MarvelHomeComponent ]
+      imports: [ MarvelHomeModule, HttpClientTestingModule, ]
     })
     .compileComponents();
   });
