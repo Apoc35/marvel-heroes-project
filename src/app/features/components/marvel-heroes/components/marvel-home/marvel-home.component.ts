@@ -2,6 +2,7 @@ import { Hero, HeroesResponse, Thumbnail } from './../../../../../models/heroes.
 import { Subject, take, takeUntil } from 'rxjs';
 import { HeroesService } from './../../../../../services/heroes.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-marvel-home',
@@ -15,7 +16,8 @@ export class MarvelHomeComponent implements OnInit, OnDestroy {
   private onDestroy = new Subject<void>();
 
   constructor(
-    public readonly heroesService: HeroesService,
+    private readonly router: Router,
+    private readonly heroesService: HeroesService,
   ){}
 
   public takeImage(thumbnail: Thumbnail): string {
@@ -30,6 +32,10 @@ export class MarvelHomeComponent implements OnInit, OnDestroy {
       this.$heroes.pipe(takeUntil(this.onDestroy)).subscribe((value) => {
       this.heroes = value.data.results;
     })
+  }
+
+  public submit() : void{
+    void this.router.navigate(['hero-info']);
   }
 
   public ngOnDestroy() {
