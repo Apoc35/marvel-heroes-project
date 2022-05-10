@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import {RouterModule} from '@angular/router';
 import { MarvelHomeComponent } from './marvel-home.component';
 import { MarvelHomeRoutingModule } from './marvel-home-routing.module';
+import { MarvelHeroInfoComponent } from './components/marvel-hero-info/marvel-hero-info.component';
 
 
 

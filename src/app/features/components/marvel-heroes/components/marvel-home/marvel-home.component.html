@@ -15,7 +15,7 @@
 
 
 <div class="heroes">
-  <a *ngFor="let hero of heroes">
+  <a *ngFor="let hero of heroes" [routerLink]="['hero-info']">
     <img *ngIf="hero.thumbnail" [src]="takeImage(hero.thumbnail)" />
     {{ hero.name }}
   </a>
