@@ -7,7 +7,7 @@ interface Data {
 }
 
 export interface Hero {
-  id?: number;
+  id?: string;
   name?:string;
   description?:string;
   modified?:number;

@@ -10,6 +10,7 @@ import { Injectable } from '@angular/core';
 export class HeroesService {
 
   public readonly $heroesData = new ReplaySubject<HeroesResponse>(1);
+  public activeHero: Hero = {};
 
   constructor(
     private readonly heroesRepository: HeroesRepository,

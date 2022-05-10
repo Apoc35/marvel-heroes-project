@@ -34,7 +34,8 @@ export class MarvelHomeComponent implements OnInit, OnDestroy {
     })
   }
 
-  public submit() : void{
+  public submit(hero:Hero) : void{
+    this.heroesService.activeHero = hero;
     void this.router.navigate(['hero-info']);
   }
 

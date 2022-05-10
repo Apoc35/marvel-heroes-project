@@ -15,8 +15,10 @@
 
 
 <div class="heroes">
-  <a *ngFor="let hero of heroes" (click)='submit()'>
-    <img *ngIf="hero.thumbnail" [src]="takeImage(hero.thumbnail)" />
-    {{ hero.name }}
-  </a>
+  <ng-container *ngFor="let hero of heroes"  >
+    <a (click)="submit(hero)">
+      <img *ngIf="hero.thumbnail" [src]="takeImage(hero.thumbnail)" />
+      {{ hero.name }}
+    </a>
+  </ng-container>
 </div>

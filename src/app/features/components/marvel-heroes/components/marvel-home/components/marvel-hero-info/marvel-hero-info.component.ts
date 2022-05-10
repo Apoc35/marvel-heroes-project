@@ -1,3 +1,4 @@
+import { HeroesService } from './../../../../../../../services/heroes.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarvelHeroInfoComponent implements OnInit {
 
-  constructor() { }
+  public hero = this.heroesService.activeHero;
+
+  constructor(
+    private readonly heroesService: HeroesService,
+  ) { }
 
   ngOnInit(): void {
   }
