@@ -12,6 +12,7 @@ export interface Hero {
   description?:string;
   modified?:number;
   thumbnail?: Thumbnail;
+  comics?:Comics;
 }
 
 export interface Thumbnail {
@@ -19,7 +20,7 @@ export interface Thumbnail {
   extension:string;
 }
 
-export interface comics {
+export interface Comics {
   avaliable?: number;
   collectionURL?:string;
   items?: Array<Comic>
