@@ -1,1 +1,12 @@
-{{ hero | json }}
+
+<h1>{{hero.name}}</h1>
+
+<div class="hero-info-container">
+
+  <span *ngIf="!hero.description; else hasDescription">No description</span>
+  <ng-template #hasDescription>
+    <span>Description: {{hero.description}}</span>
+  </ng-template>
+  <img class="thumb-config" *ngIf="hero.thumbnail" [src]="takeImage(hero.thumbnail)" />
+
+</div>

@@ -1,3 +1,4 @@
+import { Thumbnail } from './../../../../../../../models/heroes.model';
 import { HeroesService } from './../../../../../../../services/heroes.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -16,5 +17,7 @@ export class MarvelHeroInfoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  public takeImage(thumbnail: Thumbnail): string {
+    return `${thumbnail.path}.${thumbnail.extension}`
+  }
 }

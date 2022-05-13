@@ -1,0 +1,10 @@
+.hero-info-container{
+  display:flex;
+  justify-content:space-between;
+}
+
+.thumb-config{
+  display: flex;
+  width: 400px;
+  height:350px;
+}

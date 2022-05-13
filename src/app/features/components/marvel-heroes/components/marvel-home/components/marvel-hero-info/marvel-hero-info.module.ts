@@ -9,7 +9,7 @@ import { MarvelHeroInfoComponent } from './marvel-hero-info.component';
   declarations: [MarvelHeroInfoComponent],
   imports: [
     CommonModule,
-    MarvelHeroInfoRoutingModule
+    MarvelHeroInfoRoutingModule,
   ]
 })
 export class MarvelHeroInfoModule { }
