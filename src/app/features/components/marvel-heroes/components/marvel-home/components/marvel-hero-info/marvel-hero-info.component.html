@@ -11,12 +11,18 @@
 
 </div>
 
-<div class="comic-info-container">
+<div *ngIf="comics" class="comic-info">
+  <h2>Comics</h2>
+  <span class="container">
+    <ng-container *ngFor="let comic of comics">
+      <span class="comic-content">
+        <h3>{{comic.title}}</h3>
+        <img *ngIf="comic.thumbnail" [src]="takeImage(comic.thumbnail)" />
 
-  <ng-container *ngFor="let comic of comics">
-
-
-
-  </ng-container>
-
+        <span>
+          {{ comic.description ? comic.description : "Sem descrição" }}
+        </span>
+      </span>
+    </ng-container>
+  </span>
 </div>

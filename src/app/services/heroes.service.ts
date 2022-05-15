@@ -39,5 +39,4 @@ export class HeroesService {
   public getComics(id: string):Observable<ComicsResponse>{
     return this.heroesRepository.getComics(id).pipe(take(1));
   }
-
 }

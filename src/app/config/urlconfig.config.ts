@@ -9,5 +9,5 @@ const endpoints = {
 export const urlParams = `ts=${endpoints.timestamp}&apikey=${endpoints.apikey}&hash=${endpoints.hash}`
 
 export const urlConfig = {
-  heroes:`${endpoints.baseUrl}/v1/public/characters?`
+  heroes:`${endpoints.baseUrl}/v1/public/characters`
 }

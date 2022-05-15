@@ -9,9 +9,8 @@ interface Data {
 export interface Comics {
   title: string;
   description: string;
-  format:string;
   pageCount:number;
-  heroThumbnail: ComicThumbnail;
+  thumbnail: ComicThumbnail;
 }
 
 export interface ComicThumbnail {
