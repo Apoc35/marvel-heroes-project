@@ -12,21 +12,9 @@ export interface Hero {
   description?:string;
   modified?:number;
   thumbnail?: Thumbnail;
-  comics?:Comics;
 }
 
 export interface Thumbnail {
   path:string;
   extension:string;
-}
-
-export interface Comics {
-  avaliable?: number;
-  collectionURL?:string;
-  items?: Array<Comic>
-}
-
-export interface Comic {
-  resourceURL:string;
-  name:string;
 }

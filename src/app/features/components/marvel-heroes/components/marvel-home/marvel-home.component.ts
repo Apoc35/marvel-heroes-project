@@ -29,13 +29,14 @@ export class MarvelHomeComponent implements OnInit, OnDestroy {
       this.heroesService.addHeroes(response);
       this.heroes = response.data.results;
     });
-      this.$heroes.pipe(takeUntil(this.onDestroy)).subscribe((value) => {
+
+    this.$heroes.pipe(takeUntil(this.onDestroy)).subscribe((value) => {
       this.heroes = value.data.results;
     })
   }
 
   public submit(hero:Hero) : void{
-    this.heroesService.activeHero = hero;
+    this.heroesService.setActiveHero(hero);
     void this.router.navigate(['hero-info']);
   }
 
