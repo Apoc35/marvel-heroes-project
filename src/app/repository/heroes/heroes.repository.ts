@@ -23,13 +23,13 @@ export class HeroesRepository {
 
   public alfaOrder():Observable<HeroesResponse>{
     return this.httpClient.get<HeroesResponse>(
-      `${urlConfig.heroes}?&limit=20nameStartsWith=da&orderBy=-name&${urlParams}`
+      `${urlConfig.heroes}?&nameStartsWith=da&orderBy=-name&${urlParams}`
     )
   }
 
   public searchHeroes(name: string):Observable<HeroesResponse>{
     return this.httpClient.get<HeroesResponse>(
-      `${urlConfig.heroes}?&limit=20&nameStartsWith=${name}&orderBy=name&${urlParams}`
+      `${urlConfig.heroes}?&nameStartsWith=${name}&orderBy=name&${urlParams}`
     )
   }
 
