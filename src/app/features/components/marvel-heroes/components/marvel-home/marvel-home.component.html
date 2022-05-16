@@ -1,0 +1,27 @@
+<div class="grid-button-container">
+  <button mat-mini-fab color="black" matSuffix>
+    <mat-icon aria-hidden="false" aria-label="home icon" >home</mat-icon>
+  </button>
+
+  <section>
+    <mat-checkbox
+    class="example-margin"
+    color="primary">Ordenar de A-Z
+  </mat-checkbox>
+  </section>
+
+  <button mat-mini-fab color="black" matSuffix>
+    <mat-icon aria-hidden="false" aria-label="favorite icon" >favorite</mat-icon>
+  </button>
+
+</div>
+
+
+<div class="heroes">
+  <ng-container *ngFor="let hero of heroes"  >
+    <a (click)="submit(hero)">
+      <img *ngIf="hero.thumbnail" [src]="takeImage(hero.thumbnail)" />
+      {{ hero.name }}
+    </a>
+  </ng-container>
+</div>

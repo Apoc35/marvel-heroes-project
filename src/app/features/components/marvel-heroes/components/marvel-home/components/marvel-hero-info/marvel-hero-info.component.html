@@ -1,0 +1,28 @@
+
+<h1>{{hero.name}}</h1>
+
+<div class="hero-info-container">
+
+  <span *ngIf="!hero.description; else hasDescription">Sem descrição</span>
+  <ng-template #hasDescription>
+    <span> <b>Descrição:</b> {{hero.description}}</span>
+  </ng-template>
+  <img class="thumb-config" *ngIf="hero.thumbnail" [src]="takeImage(hero.thumbnail)"/>
+
+</div>
+
+<div *ngIf="comics" class="comic-info">
+  <h2>Comics</h2>
+  <span class="container">
+    <ng-container *ngFor="let comic of comics">
+      <span class="comic-content">
+        <h3>{{comic.title}}</h3>
+        <img *ngIf="comic.thumbnail" [src]="takeImage(comic.thumbnail)" />
+
+        <span>
+          {{ comic.description ? comic.description : "Sem descrição" }}
+        </span>
+      </span>
+    </ng-container>
+  </span>
+</div>

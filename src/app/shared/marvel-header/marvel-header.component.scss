@@ -1,0 +1,46 @@
+header {
+  background-image: url('../../../assets/background.jpg');
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 280px;
+  margin-bottom: 30px;
+  img {
+    display: flex;
+    height: auto;
+    width: 250px;
+  }
+}
+
+.form-field {
+  max-width: 400px;
+  width: 100%;
+  background-color:rgb(255,255,255);opacity:0.9;
+}
+
+.header-options-container {
+  display:flex;
+  justify-content: flex-end;
+  margin-bottom:20px;
+}
+
+.header-button {
+  background-color: #ee161e;
+  color: white;
+}
+
+.header-button-middle {
+  background-color: #1c100b;
+  color: white;
+}
+
+.fade:hover {
+  opacity: 0.7;
+}
