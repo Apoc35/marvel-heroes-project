@@ -11,6 +11,11 @@
   display:flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 900px) {
+    justify-content:flex-start;
+    flex-direction: column;
+  }
 }
 
 
@@ -18,5 +23,8 @@
   display: flex;
   height: auto;
   width: 250px;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 20px;
+  }
 }
 

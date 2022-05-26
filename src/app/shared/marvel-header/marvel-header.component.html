@@ -1,21 +1,23 @@
 <header>
   <app-marvel-container>
     <span  class="header-container">
-      <img src={{logoImage}} />
+      <a href="./">
+        <img src={{logoImage}}/>
+      </a>
       <form method="post" autocomplete="off" [formGroup]="form" (ngSubmit)="submit()">
-        <mat-form-field class="form-field" appearance="fill">
+        <mat-form-field *ngIf="searchVisibility()" class="form-field" appearance="fill">
           <mat-label>Pesquise aqui</mat-label>
           <input matInput #input placeholder="Ex. Iron man" formControlName="search">
-          <mat-hint align="start">Pesquise aqui. Valor mínimo de 2 caracters.</mat-hint>
+          <mat-hint align="start">Valor mínimo de 2 caractéres.</mat-hint>
           <button mat-icon-button matSuffix>
             <mat-icon aria-hidden="false" aria-label="search icon" class="icon-display">search</mat-icon>
           </button>
         </mat-form-field>
-        <div class="header-options-container">
+        <!-- <div class="header-options-container">
           <a (click)="submit()" mat-flat-button class="header-button fade" target="_blank">Personagens</a>
           <a mat-flat-button class="header-button-middle fade" target="_blank">Comics</a>
           <a mat-flat-button class="header-button fade" target="_blank">Filmes</a>
-        </div>
+        </div> -->
       </form>
     </span>
   </app-marvel-container>

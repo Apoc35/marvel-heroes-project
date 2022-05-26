@@ -12,6 +12,10 @@ header {
   align-items: center;
   height: 280px;
   margin-bottom: 30px;
+  @media screen and (max-width: 500px) {
+    justify-content:flex-start;
+    flex-direction: column;
+  }
   img {
     display: flex;
     height: auto;
@@ -20,6 +24,7 @@ header {
 }
 
 .form-field {
+  border-radius: 5px;
   max-width: 400px;
   width: 100%;
   background-color:rgb(255,255,255);opacity:0.9;
