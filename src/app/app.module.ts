@@ -10,6 +10,8 @@ import { MarvelHeroesModule } from './features/components/marvel-heroes/marvel-h
 import { MarvelContainerComponent } from './shared/marvel-container/marvel-container.component';
 import { MarvelFooterModule } from './shared/marvel-footer/marvel-footer.module';
 import { HttpClientModule } from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 
@@ -21,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     BrowserAnimationsModule,
     MarvelHeaderModule,
+    MatCardModule,
     MatGridListModule,
     MarvelHeroesModule,
     MarvelFooterModule,

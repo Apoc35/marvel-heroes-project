@@ -14,6 +14,7 @@ export class MarvelHeroInfoComponent implements OnInit {
   public $hero = this.heroesService.$activeHero.asObservable();
   public hero: Hero = {};
   public comics: Array<Comics> = [];
+  public heroImage: string = '';
 
   constructor(
     private readonly heroesService: HeroesService,
@@ -26,7 +27,8 @@ export class MarvelHeroInfoComponent implements OnInit {
     })
   }
   public takeImage(thumbnail: Thumbnail): string {
-    return `${thumbnail.path}.${thumbnail.extension}`
+    this.heroImage = `${thumbnail.path}.${thumbnail.extension}`;
+    return this.heroImage;
   }
 
   public getComics(id: string) {
