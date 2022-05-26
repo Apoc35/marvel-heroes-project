@@ -14,6 +14,8 @@ export class HeroesService {
   public readonly $comicsData = new ReplaySubject<ComicsResponse>(1);
   public readonly $activeHero = new ReplaySubject<Hero>(1);
 
+  public searchReveal: boolean = true;
+
 
   constructor(
     private readonly heroesRepository: HeroesRepository,
@@ -32,9 +34,9 @@ export class HeroesService {
     return this.heroesRepository.getHeroes().pipe(take(1));
   }
 
-  public alfaOrder():Observable<HeroesResponse>{
-    return this.heroesRepository.alfaOrder().pipe(take(1));
-  }
+  // public alfaOrder():Observable<HeroesResponse>{
+  //   return this.heroesRepository.alfaOrder().pipe(take(1));
+  // }
 
   public searchHeroes(heroName: string):Observable<HeroesResponse>{
     return this.heroesRepository.searchHeroes(heroName).pipe(take(1));

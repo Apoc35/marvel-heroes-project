@@ -24,7 +24,10 @@ export class MarvelHomeComponent implements OnInit, OnDestroy {
     return `${thumbnail.path}.${thumbnail.extension}`
   }
 
+
   ngOnInit(): void {
+    this.heroesService.searchReveal = true;
+
     this.heroesService.getHeroes().pipe(take(1)).subscribe((response) => {
       this.heroesService.addHeroes(response);
       this.heroes = response.data.results;
@@ -36,6 +39,7 @@ export class MarvelHomeComponent implements OnInit, OnDestroy {
   }
 
   public submit(hero:Hero) : void{
+    this.heroesService.searchReveal = false;
     this.heroesService.setActiveHero(hero);
     void this.router.navigate(['hero-info']);
   }

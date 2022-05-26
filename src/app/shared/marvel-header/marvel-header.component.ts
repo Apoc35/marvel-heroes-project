@@ -13,6 +13,10 @@ export class MarvelHeaderComponent implements OnInit {
   public logoImage ='../../assets/logo.png';
   public form: FormGroup;
 
+  public searchVisibility(): boolean {
+    return this.heroesService.searchReveal;
+  }
+
   constructor(
     private readonly formBuilder: FormBuilder,
     private readonly heroesService: HeroesService,
